@@ -1,6 +1,6 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import Yone.Database.blacklistusers_sql as sql
+import MissCutie.Database.blacklistusers_sql as sql
 from Yone import (
     DEV_USERS,
     OWNER_ID,
@@ -8,12 +8,12 @@ from Yone import (
     REQUESTER,
     dispatcher,
 )
-from Yone.Handlers.validation import dev_plus
-from Yone.Handlers.extraction import (
+from MissCutie.Handlers.validation import dev_plus
+from MissCutie.Handlers.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from Yone.Plugins.Admin.log_channel import gloggable
+from MissCutie.Plugins.Admin.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async
