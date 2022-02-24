@@ -3,18 +3,18 @@ from telethon import events
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async, Filters
 
-from Yone import telethn, dispatcher
-from Yone.Handlers.validation import (
+from MissCutie import telethn, dispatcher
+from MissCutie.Handlers.validation import (
     can_delete,
     user_admin,
     
 )
-from Yone.Handlers.telethon.validations import (
+from MissCutie.Handlers.telethon.validations import (
     can_delete_messages,
     user_is_admin,   
 )
 
-import Yone.Database.purges_sql as sql
+import MissCutie.Database.purges_sql as sql
 
 async def purge_messages(event):
     start = time.perf_counter()
