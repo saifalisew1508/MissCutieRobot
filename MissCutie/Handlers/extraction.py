@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from Yone import LOGGER
-from Yone.Plugins.users import get_user_id
+from MissCutie import LOGGER
+from MissCutie.Plugins.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
