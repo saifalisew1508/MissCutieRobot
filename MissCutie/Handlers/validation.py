@@ -1,5 +1,5 @@
 from telegram import Chat, ChatMember, Update, ParseMode
-from Yone import INSPECTOR, REQUESTER, DEV_USERS, DEL_CMDS, SUPPORT_CHAT, dispatcher
+from MissCutie import INSPECTOR, REQUESTER, DEV_USERS, DEL_CMDS, SUPPORT_CHAT, dispatcher
 from threading import RLock
 from cachetools import TTLCache
 from time import perf_counter
@@ -423,6 +423,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from Yone.Plugins.Admin import connection
+from MissCutie.Plugins.Admin import connection
 
 connected = connection.connected
