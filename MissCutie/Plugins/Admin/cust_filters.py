@@ -15,25 +15,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from Yone import dispatcher, LOGGER, INSPECTOR
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.managers import MessageHandlerChecker
-from Yone.Handlers.validation import user_admin
-from Yone.Handlers.extraction import extract_text
-from Yone.Handlers.filters import CustomFilters
-from Yone.Handlers.misc import build_keyboard_parser
-from Yone.Handlers.msg_types import get_filter_type
-from Yone.Handlers.string_handling import (
+from MissCutie import dispatcher, LOGGER, INSPECTOR
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.managers import MessageHandlerChecker
+from MissCutie.Handlers.validation import user_admin
+from MissCutie.Handlers.extraction import extract_text
+from MissCutie.Handlers.filters import CustomFilters
+from MissCutie.Handlers.misc import build_keyboard_parser
+from MissCutie.Handlers.msg_types import get_filter_type
+from MissCutie.Handlers.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from Yone.Database import cust_filters_sql as sql
+from MissCutie.Database import cust_filters_sql as sql
 
-from Yone.Plugins.Admin.connection import connected
+from MissCutie.Plugins.Admin.connection import connected
 
-from Yone.Handlers.alternate import send_message, typing_action
+from MissCutie.Handlers.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 
