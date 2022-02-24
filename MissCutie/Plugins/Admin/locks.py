@@ -9,20 +9,20 @@ from telegram.utils.helpers import mention_html
 
 from alphabet_detector import AlphabetDetector
 
-import Yone.Database.locks_sql as sql
-from Yone import dispatcher, INSPECTOR, LOGGER
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.validation import (
+import MissCutie.Database.locks_sql as sql
+from MissCutie import dispatcher, INSPECTOR, LOGGER
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.validation import (
     can_delete,
     is_user_admin,
     user_not_admin,
     is_bot_admin,
     user_admin,
 )
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Plugins.Admin.connection import connected
-from Yone.Database.approve_sql import is_approved
-from Yone.Handlers.alternate import send_message, typing_action
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Plugins.Admin.connection import connected
+from MissCutie.Database.approve_sql import is_approved
+from MissCutie.Handlers.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 
