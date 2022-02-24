@@ -1,6 +1,6 @@
 from enum import IntEnum, unique
 
-from Yone.Handlers.string_handling import button_markdown_parser
+from MissCutie.Handlers.string_handling import button_markdown_parser
 from telegram import Message
 
 
