@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import String, Column, BigInteger, UnicodeText
 
-from Yone.Database import SESSION, BASE
+from MissCutie.Database import SESSION, BASE
 
 DEF_COUNT = 1
 DEF_LIMIT = 0
