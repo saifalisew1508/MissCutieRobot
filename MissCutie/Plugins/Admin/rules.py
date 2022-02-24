@@ -1,9 +1,9 @@
 from typing import Optional
 
-import Yone.Database.rules_sql as sql
-from Yone import dispatcher
-from Yone.Handlers.validation import user_admin, connection_status
-from Yone.Handlers.string_handling import markdown_parser
+import MissCutie.Database.rules_sql as sql
+from MissCutie import dispatcher
+from MissCutie.Handlers.validation import user_admin, connection_status
+from MissCutie.Handlers.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
