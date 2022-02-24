@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import Yone.Database.notes_sql as sql
-from Yone import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, INSPECTOR
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.managers import MessageHandlerChecker
-from Yone.Handlers.validation import user_admin, connection_status
-from Yone.Handlers.misc import build_keyboard, revert_buttons
-from Yone.Handlers.msg_types import get_note_type
-from Yone.Handlers.string_handling import (
+import MissCutie.Database.notes_sql as sql
+from MissCutie import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, INSPECTOR
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.managers import MessageHandlerChecker
+from MissCutie.Handlers.validation import user_admin, connection_status
+from MissCutie.Handlers.misc import build_keyboard, revert_buttons
+from MissCutie.Handlers.msg_types import get_note_type
+from MissCutie.Handlers.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (
