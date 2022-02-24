@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from Yone import INSPECTOR, REQUESTER, dispatcher
-from Yone.Handlers.validation import (
+from MissCutie import INSPECTOR, REQUESTER, dispatcher
+from MissCutie.Handlers.validation import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Database import antiflood_sql as sql
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Database import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from Yone.Handlers.string_handling import extract_time
-from Yone.Plugins.Admin.connection import connected
-from Yone.Handlers.alternate import send_message
-from Yone.Database.approve_sql import is_approved
+from MissCutie.Handlers.string_handling import extract_time
+from MissCutie.Plugins.Admin.connection import connected
+from MissCutie.Handlers.alternate import send_message
+from MissCutie.Database.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 
