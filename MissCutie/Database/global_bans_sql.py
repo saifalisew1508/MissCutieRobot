@@ -1,6 +1,6 @@
 import threading
 
-from Yone.Database import BASE, SESSION
+from MissCutie.Database import BASE, SESSION
 from sqlalchemy import Boolean, Column, BigInteger, String, UnicodeText
 
 
