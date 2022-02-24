@@ -1,7 +1,7 @@
 import threading
 
-from Yone import dispatcher
-from Yone.Database import BASE, SESSION
+from MissCutie import dispatcher
+from MissCutie.Database import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
