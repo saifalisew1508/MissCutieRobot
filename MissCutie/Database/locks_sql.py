@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from Yone.Database import SESSION, BASE
+from MissCutie.Database import SESSION, BASE
 
 
 class Permissions(BASE):
