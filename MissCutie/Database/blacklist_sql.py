@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import func, distinct, Column, String, UnicodeText, BigInteger
 
-from Yone.Database import SESSION, BASE
+from MissCutie.Database import SESSION, BASE
 
 
 class BlackListFilters(BASE):
