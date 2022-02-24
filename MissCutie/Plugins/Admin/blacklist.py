@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
-import Yone.Database.blacklist_sql as sql
-from Yone import dispatcher, LOGGER
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.validation import user_admin, user_not_admin
-from Yone.Handlers.extraction import extract_text
-from Yone.Handlers.misc import split_message
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Plugins.Admin.warns import warn
-from Yone.Handlers.string_handling import extract_time
-from Yone.Plugins.Admin.connection import connected
-from Yone.Database.approve_sql import is_approved
-from Yone.Handlers.alternate import send_message, typing_action
+import MissCutie.Database.blacklist_sql as sql
+from MissCutie import dispatcher, LOGGER
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.validation import user_admin, user_not_admin
+from MissCutie.Handlers.extraction import extract_text
+from MissCutie.Handlers.misc import split_message
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Plugins.Admin.warns import warn
+from MissCutie.Handlers.string_handling import extract_time
+from MissCutie.Plugins.Admin.connection import connected
+from MissCutie.Database.approve_sql import is_approved
+from MissCutie.Handlers.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
