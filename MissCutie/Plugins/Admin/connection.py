@@ -6,9 +6,9 @@ from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CommandHandler, CallbackQueryHandler, run_async
 
 import Yone.Database.connection_sql as sql
-from Yone import dispatcher, INSPECTOR, DEV_USERS
-from Yone.Handlers import validation
-from Yone.Handlers.alternate import send_message, typing_action
+from MissCutie import dispatcher, INSPECTOR, DEV_USERS
+from MissCutie.Handlers import validation
+from MissCutie.Handlers.alternate import send_message, typing_action
 
 user_admin = validation.user_admin
 
