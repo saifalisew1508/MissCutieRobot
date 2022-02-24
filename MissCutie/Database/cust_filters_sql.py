@@ -4,8 +4,8 @@ from sqlalchemy import Column, String, UnicodeText, Boolean, distinct, func
 from sqlalchemy.sql.sqltypes import BigInteger
 
 
-from Yone.Handlers.msg_types import Types
-from Yone.Database import BASE, SESSION
+from MissCutie.Handlers.msg_types import Types
+from MissCutie.Database import BASE, SESSION
 
 
 class CustomFilters(BASE):
