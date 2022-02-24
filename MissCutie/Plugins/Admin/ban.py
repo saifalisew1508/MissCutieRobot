@@ -25,8 +25,8 @@ from Yone import (
     REQUESTER,
     dispatcher,
 )
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.validation import (
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.validation import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -38,9 +38,9 @@ from Yone.Handlers.validation import (
     user_admin_no_reply,
     can_delete,
 )
-from Yone.Handlers.extraction import extract_user_and_text
-from Yone.Handlers.string_handling import extract_time
-from Yone.Plugins.Admin.log_channel import gloggable, loggable
+from MissCutie.Handlers.extraction import extract_user_and_text
+from MissCutie.Handlers.string_handling import extract_time
+from MissCutie.Plugins.Admin.log_channel import gloggable, loggable
 
 
  
