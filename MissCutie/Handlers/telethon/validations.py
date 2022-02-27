@@ -42,9 +42,9 @@ async def is_user_admin(user_id: int, chat_id):
     return status
 
 
-async def yone_is_admin(chat_id: int):
+async def misscutie_is_admin(chat_id: int):
     status = False
-    yone = await telethn.get_me()
+    misscutie = await telethn.get_me()
     async for user in telethn.iter_participants(
         chat_id, filter=ChannelParticipantsAdmins
     ):
