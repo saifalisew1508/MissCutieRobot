@@ -220,10 +220,10 @@ def start(update: Update, context: CallbackContext):
 
 
 
-def yone_about_callback(update: Update, context: CallbackContext):
+def misscutie_about_callback(update: Update, context: CallbackContext):
     first_name = update.effective_user.first_name
     query = update.callback_query
-    if query.data == "yone_":
+    if query.data == "misscutie_":
         query.message.edit_text(
             text="""Hello *{}*, My name is *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
             \n ‣ I can Restrict Users.
