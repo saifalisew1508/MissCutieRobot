@@ -2,10 +2,10 @@ import html, re
 from typing import Optional
 
 
-from Yone import INSPECTOR, LOGGER, REQUESTER, dispatcher
-from Yone.Handlers.validation import user_admin, user_not_admin, is_user_admin
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Database import reporting_sql as sql
+from MissCutie import INSPECTOR, LOGGER, REQUESTER, dispatcher
+from MissCutie.Handlers.validation import user_admin, user_not_admin, is_user_admin
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Database import reporting_sql as sql
 from telegram import Chat, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update, User
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
