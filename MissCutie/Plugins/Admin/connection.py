@@ -5,7 +5,7 @@ from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Upda
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CommandHandler, CallbackQueryHandler, run_async
 
-import Yone.Database.connection_sql as sql
+import MissCutie.Database.connection_sql as sql
 from MissCutie import dispatcher, INSPECTOR, DEV_USERS
 from MissCutie.Handlers import validation
 from MissCutie.Handlers.alternate import send_message, typing_action
