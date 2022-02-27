@@ -1,4 +1,4 @@
-from Yone import DEV_USERS, INSPECTOR, REQUESTER, telethn
+from MissCutie import DEV_USERS, INSPECTOR, REQUESTER, telethn
 
 IMMUNE_USERS = INSPECTOR.union(REQUESTER).union(DEV_USERS)
 
