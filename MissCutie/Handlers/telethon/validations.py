@@ -48,7 +48,7 @@ async def misscutie_is_admin(chat_id: int):
     async for user in telethn.iter_participants(
         chat_id, filter=ChannelParticipantsAdmins
     ):
-        if yone.id == user.id:
+        if misscutie.id == user.id:
             status = True
             break
     return status
