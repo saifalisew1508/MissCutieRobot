@@ -5,26 +5,26 @@ import time
 from contextlib import suppress
 from functools import partial
 
-import Yone
-import Yone.Database.welcome_sql as sql
-import Yone.Database.global_bans_sql as gban_sql
-from Yone import (
+import MissCutie
+import MissCutie.Database.welcome_sql as sql
+import MissCutie.Database.global_bans_sql as gban_sql
+from MissCutie import (
     REQUESTER, DEV_USERS, INSPECTOR, JOIN_LOGGER, LOGGER,
     OWNER_ID, dispatcher
 )
-from Yone.Handlers.validation import (
+from MissCutie.Handlers.validation import (
     is_user_ban_protected, user_admin, connection_status,
 )
-from Yone.Handlers.misc import (
+from MissCutie.Handlers.misc import (
     build_keyboard,
     revert_buttons,
 )
-from Yone.Handlers.msg_types import get_welcome_type
-from Yone.Handlers.string_handling import (
+from MissCutie.Handlers.msg_types import get_welcome_type
+from MissCutie.Handlers.string_handling import (
     escape_invalid_curly_brackets, markdown_parser,
 )
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Database.global_bans_sql import is_user_gbanned
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Database.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions, InlineKeyboardButton,
     InlineKeyboardMarkup, ParseMode, Update,
