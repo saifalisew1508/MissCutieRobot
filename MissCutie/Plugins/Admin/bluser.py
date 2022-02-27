@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
 import MissCutie.Database.blacklistusers_sql as sql
-from Yone import (
+from MissCutie import (
     DEV_USERS,
     OWNER_ID,
     INSPECTOR,
