@@ -3,7 +3,7 @@
 # Copyright (c) 2022, Kushal
 # All rights reserved.
 
-from Yone import LOAD, LOGGER, NO_LOAD
+from MissCutie import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
