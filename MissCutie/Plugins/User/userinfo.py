@@ -9,7 +9,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from Yone import (
+from MissCutie import (
     DEV_USERS,
     OWNER_ID,
     TOKEN,
