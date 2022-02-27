@@ -1,8 +1,8 @@
 import os
 from time import sleep
-from Yone import OWNER_ID, dispatcher
-from Yone.Handlers.extraction import extract_user
-from Yone.Database.users_sql import get_user_com_chats
+from MissCutie import OWNER_ID, dispatcher
+from MissCutie.Handlers.extraction import extract_user
+from MissCutie.Database.users_sql import get_user_com_chats
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, Filters
