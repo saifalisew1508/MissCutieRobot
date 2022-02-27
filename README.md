@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/noob-kittu/YoneRobot/stargazers"><img src="https://img.shields.io/github/stars/noob-kittu/YoneRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
+    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
 </p>
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
