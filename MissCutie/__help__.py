@@ -1,11 +1,11 @@
 import importlib, re
-from Yone import dispatcher, ALLOW_EXCL, LOGGER
+from MissCutie import dispatcher, ALLOW_EXCL, LOGGER
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from Yone.Handlers.misc import paginate_modules
+from MissCutie.Handlers.misc import paginate_modules
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import escape_markdown
-from Yone.Handlers.validation import is_user_admin
+from MissCutie.Handlers.validation import is_user_admin
 from telegram.ext.dispatcher import DispatcherHandlerStop
 from os.path import isfile
 
@@ -32,7 +32,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 import os
-path =r'Yone/Plugins/'
+path =r'MissCutie/Plugins/'
 list_of_files = []
 for root, dirs, files in os.walk(path):
     for file in files:
@@ -45,7 +45,7 @@ mod_name = [
     ]
 
 
-path =r'Yone/Plugins/Admin/'
+path =r'MissCutie/Plugins/Admin/'
 admin_list_of_files = []
 for root, dirs, files in os.walk(path):
     for file in files:
@@ -70,7 +70,7 @@ for module_names in admin_mod_name:
     if hasattr(admin_imported_module, "__help__") and admin_imported_module.__help__:
         ADMIN[admin_imported_module.__mod_name__.lower()] = admin_imported_module
 
-path =r'Yone/Plugins/User/'
+path =r'MissCutie/Plugins/User/'
 user_list_of_files = []
 for root, dirs, files in os.walk(path):
     for file in files:
@@ -96,7 +96,7 @@ for u_module_names in user_mod_name:
         USER[user_imported_module.__mod_name__.lower()] = user_imported_module
 
 
-path =r'Yone/Plugins/Tools/'
+path =r'MissCutie/Plugins/Tools/'
 tools_list_of_files = []
 for root, dirs, files in os.walk(path):
     for file in files:
