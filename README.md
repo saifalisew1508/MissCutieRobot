@@ -3,7 +3,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/commits/prince"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutieRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/saifalisew1508/MissCutieRobot/commits/saifalisew1508"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutieRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot/issues"> <img src="https://img.shields.io/github/issues/saifalisew1508/MissCutieRobot?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot/network/members"> <img src="https://img.shields.io/github/forks/saifalisew1508/MissCutieRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
