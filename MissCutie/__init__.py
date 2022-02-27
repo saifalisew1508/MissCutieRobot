@@ -79,7 +79,7 @@ if ENV:
 
 
 else:
-    from Yone.config import Development as Config
+    from MissCutie.config import Development as Config
 
     try:
         OWNER_ID = int(Config.OWNER_ID)
