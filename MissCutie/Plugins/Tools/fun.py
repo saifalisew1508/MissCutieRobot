@@ -1,12 +1,12 @@
 import html
 import random
 import time
-from Yone.Database.approve_sql import is_approved
-import Yone.Plugins.Tools.fun_strings as fun_strings
-from Yone import dispatcher
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.validation import is_user_admin
-from Yone.Handlers.extraction import extract_user
+from MissCutie.Database.approve_sql import is_approved
+import MissCutie.Plugins.Tools.fun_strings as fun_strings
+from MissCutie import dispatcher
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.validation import is_user_admin
+from MissCutie.Handlers.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
