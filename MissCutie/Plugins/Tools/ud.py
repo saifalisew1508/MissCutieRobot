@@ -1,6 +1,6 @@
 import requests
-from Yone import dispatcher
-from Yone.Plugins.disable import DisableAbleCommandHandler
+from MissCutie import dispatcher
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
