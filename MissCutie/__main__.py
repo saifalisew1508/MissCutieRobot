@@ -267,7 +267,7 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
     [
         InlineKeyboardButton(text="Tools", callback_data="tools_back"),
         InlineKeyboardButton(
-            text="Bot Info", callback_data="yone_"
+            text="Bot Info", callback_data="misscutie_"
         ),
     ],
     [
@@ -301,7 +301,7 @@ def main():
     user_help_callback_handler = CallbackQueryHandler(user_help_button, pattern=r"user_.*", run_async=True)
     tools_help_callback_handler = CallbackQueryHandler(tools_help_button, pattern=r"tools_.*", run_async=True)
 
-    about_callback_handler = CallbackQueryHandler(yone_about_callback, pattern=r"yone_", run_async=True)
+    about_callback_handler = CallbackQueryHandler(misscutie_about_callback, pattern=r"misscutie_", run_async=True)
 
     settings_handler = CommandHandler("settings", get_settings, run_async=True)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_", run_async=True)
