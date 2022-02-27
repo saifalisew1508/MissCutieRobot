@@ -158,7 +158,7 @@ def new_member(update: Update, context: CallbackContext):
 
         if new_mem.id == bot.id and not Yone.ALLOW_CHATS:
             with suppress(BadRequest):
-                update.effective_message.reply_text(f"I cant join more groups now due to increasing userbase and load.\nAdd my friend @KoraX_Bot instead\n • Same Yone Code\n • Same Support\n • Same Updates channel\n\nPowered by @Yone_Support")
+                update.effective_message.reply_text(f"I cant join more groups now due to increasing userbase and load.\nAdd my friend @MissCutieRobot instead\n • Same MissCutie Code\n • Same Support\n • Same Updates channel\n\nPowered by @MissCutieBots")
             bot.leave_chat(update.effective_chat.id)
             return
 
