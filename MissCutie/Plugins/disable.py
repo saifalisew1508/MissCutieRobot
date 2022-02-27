@@ -2,9 +2,9 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from Yone import dispatcher
-from Yone.Handlers.managers import CMD_STARTERS, SpamChecker
-from Yone.Handlers.misc import is_module_loaded
+from MissCutie import dispatcher
+from MissCutie.Handlers.managers import CMD_STARTERS, SpamChecker
+from MissCutie.Handlers.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
