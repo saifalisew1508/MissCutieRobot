@@ -3,25 +3,25 @@ import re
 from typing import Optional
 
 import telegram
-from Yone import INSPECTOR, REQUESTER, dispatcher
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Handlers.validation import (
+from MissCutie import INSPECTOR, REQUESTER, dispatcher
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Handlers.validation import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from Yone.Handlers.extraction import (
+from MissCutie.Handlers.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from Yone.Handlers.filters import CustomFilters
-from Yone.Handlers.misc import split_message
-from Yone.Handlers.string_handling import split_quotes
-from Yone.Plugins.Admin.log_channel import loggable
-from Yone.Database import warns_sql as sql
+from MissCutie.Handlers.filters import CustomFilters
+from MissCutie.Handlers.misc import split_message
+from MissCutie.Handlers.string_handling import split_quotes
+from MissCutie.Plugins.Admin.log_channel import loggable
+from MissCutie.Database import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -43,7 +43,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from Yone.Database.approve_sql import is_approved
+from MissCutie.Database.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
