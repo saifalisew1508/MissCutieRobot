@@ -18,7 +18,7 @@ from telegram.error import (
     Unauthorized,
 )
 
-from Yone import (
+from MissCutie import (
     OWNER_ID,
     OWNER_USERNAME,
     dispatcher, 
@@ -34,8 +34,8 @@ from Yone import (
     telethn,
     updater)
 
-from Yone.Plugins import ALL_MODULES
-from Yone.__help__ import (
+from MissCutie.Plugins import ALL_MODULES
+from MissCutie.__help__ import (
 get_help, 
 help_button, 
 get_settings, 
