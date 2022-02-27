@@ -240,16 +240,16 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/Yone_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/Yone_Updates"),
+                     InlineKeyboardButton(text="Support", url="t.me/MissCutie_Support"),
+                     InlineKeyboardButton(text="News", url="t.me/MissCutie_Updates"),
                    ],
                    [
-                    InlineKeyboardButton(text="Back", callback_data="yone_back")
+                    InlineKeyboardButton(text="Back", callback_data="misscutie_back")
                    ]
                 ]
             ),
         )
-    elif query.data == "yone_back":
+    elif query.data == "misscutie_back":
         query.message.edit_text(
                 PM_START_TEXT.format(
                         escape_markdown(first_name), escape_markdown(context.bot.first_name)),
