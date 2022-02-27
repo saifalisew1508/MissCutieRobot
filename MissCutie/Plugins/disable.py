@@ -25,7 +25,7 @@ if is_module_loaded(FILENAME):
         is_user_admin,
         user_admin,
     )
-    from Yone.Database import disable_sql as sql
+    from MissCutie.Database import disable_sql as sql
     from telegram.ext.dispatcher import run_async
 
     DISABLE_CMDS = []
@@ -235,7 +235,7 @@ if is_module_loaded(FILENAME):
         chat = update.effective_chat
 
         if len(args) >= 1:
-            enable_module = "YoneRobot.modules." + args[0].rsplit(".", 1)[0]
+            enable_module = "MissCutieRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(enable_module)
