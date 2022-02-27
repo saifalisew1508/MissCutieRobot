@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import Yone.Database.users_sql as sql
-from Yone import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from Yone.Handlers.validation import dev_plus, sudo_plus
-from Yone.Database.users_sql import get_all_users
+import MissCutie.Database.users_sql as sql
+from MissCutie import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from MissCutie.Handlers.validation import dev_plus, sudo_plus
+from MissCutie.Database.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5
