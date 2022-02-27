@@ -9,7 +9,7 @@ from MissCutie.Handlers.validation import (
     is_user_admin,
     user_admin,
 )
-from Yone.Handlers.extraction import (
+from MissCutie.Handlers.extraction import (
     extract_user,
     extract_user_and_text,
 )
