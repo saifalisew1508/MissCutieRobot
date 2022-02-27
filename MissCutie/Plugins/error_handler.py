@@ -8,7 +8,7 @@ import pretty_errors
 import io
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler
-from Yone import dispatcher, DEV_USERS, OWNER_ID, API_HASH, API_ID
+from MissCutie import dispatcher, DEV_USERS, OWNER_ID, API_HASH, API_ID
 from requests.structures import CaseInsensitiveDict
 
 pretty_errors.mono()
