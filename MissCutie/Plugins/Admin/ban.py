@@ -17,7 +17,7 @@ from telegram import (
 )
 from telegram.ext import run_async, CallbackContext, CallbackQueryHandler
 
-from Yone import (
+from MissCutie import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -84,7 +84,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             )
         elif user_id in REQUESTER:
             message.reply_text(
-                "Bring an order from Yone Management to fight a Requester."
+                "Bring an order from MissCutie Management to fight a Requester."
             )
         else:
             message.reply_text("This user has immunity and cannot be banned.")
