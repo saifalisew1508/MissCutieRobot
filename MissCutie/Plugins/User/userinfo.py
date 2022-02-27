@@ -296,7 +296,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n┣|• This User Is My 'Creator'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n┣|• This user is member of 'Yone Developer Team'."
+        text += "\n┣|• This user is member of 'MissCutie Developer Team'."
         disaster_level_present = True
     elif user.id in INSPECTOR:
         text += "\n┣|• This person is my Inspector. his Power level is near to my 'Owner' "
@@ -306,7 +306,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Yone_Updates">?</a>]'.format(
+        text += ' [<a href="https://t.me/MissCutie_Updates">?</a>]'.format(
             bot.username
         )
 
