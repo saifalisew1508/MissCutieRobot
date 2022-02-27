@@ -11,7 +11,7 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.utils.helpers import escape_markdown, mention_html
-from Yone.Handlers.validation import is_user_admin
+from MissCutie.Handlers.validation import is_user_admin
 
 from telegram.error import (
     BadRequest,
@@ -175,7 +175,7 @@ def start(update: Update, context: CallbackContext):
     [
         InlineKeyboardButton(text="Tools", callback_data="tools_back"),
         InlineKeyboardButton(
-            text="Bot Info", callback_data="yone_"
+            text="Bot Info", callback_data="MissCutie_"
         ),
     ],
     [
