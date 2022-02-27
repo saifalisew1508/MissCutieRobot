@@ -18,14 +18,14 @@ from Yone import (
     INFOPIC,
     dispatcher,
 )
-from Yone.__help__ import STATS, USER_INFO
-import Yone.Database.userinfo_sql as sql
-from Yone.Plugins.disable import DisableAbleCommandHandler
-from Yone.Database.global_bans_sql import is_user_gbanned
-from Yone.Database.afk_sql import is_afk, check_afk_status
-from Yone.Database.users_sql import get_user_num_chats
-from Yone.Handlers.validation import sudo_plus, user_admin, support_plus
-from Yone.Handlers.extraction import extract_user
+from MissCutie.__help__ import STATS, USER_INFO
+import MissCutie.Database.userinfo_sql as sql
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
+from MissCutie.Database.global_bans_sql import is_user_gbanned
+from MissCutie.Database.afk_sql import is_afk, check_afk_status
+from MissCutie.Database.users_sql import get_user_num_chats
+from MissCutie.Handlers.validation import sudo_plus, user_admin, support_plus
+from MissCutie.Handlers.extraction import extract_user
 
 def no_by_per(totalhp, percentage):
     """
