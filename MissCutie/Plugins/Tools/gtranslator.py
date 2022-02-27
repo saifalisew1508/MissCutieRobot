@@ -3,8 +3,8 @@ from emoji import UNICODE_EMOJI
 from telegram import  Update, ParseMode 
 from telegram.ext import run_async ,CallbackContext
 from gpytranslate import SyncTranslator
-from Yone import dispatcher
-from Yone.Plugins.disable import DisableAbleCommandHandler
+from MissCutie import dispatcher
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
 trans = SyncTranslator()
  
 def totranslate(update: Update, context: CallbackContext) -> None:
