@@ -225,7 +225,7 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "misscutie_":
         query.message.edit_text(
-            text="""Hello *{}*, My name is *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
+            text="""Hello *{}*, I'm *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
             \n ‣ I can Restrict Users.
             \n ‣ I can Greet Users with customizable welcome message and even set a group rules
             \n ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
@@ -241,7 +241,7 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
                 [
                    [
                      InlineKeyboardButton(text="Support", url="t.me/MissCutie_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/MissCutie_Updates"),
+                     InlineKeyboardButton(text="News", url="t.me/MissCutieUpdates"),
                    ],
                    [
                     InlineKeyboardButton(text="Back", callback_data="misscutie_back")
