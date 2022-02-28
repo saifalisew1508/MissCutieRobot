@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://telegra.ph/file/7e61fe06a9c02747249c4.jpg">
+  <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
 
 # MissCutie
