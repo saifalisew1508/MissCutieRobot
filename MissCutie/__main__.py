@@ -192,9 +192,6 @@ def start(update: Update, context: CallbackContext):
                 f"┣[• Owner : @{OWNER_USERNAME}  \n"
                 f"┣[• Uptime : {uptime} \n"
                 f"┣[• Core : {psutil.cpu_percent()}%\n"
-                f"┣[• CPU : {cpu}% \n"
-                f"┣[• Disk : {disk}% \n"
-                f"┣[• Ram : {mem}% \n"
                 f"┣[• Python   : Ver {python_version()} \n"
                 f"┗━━━━━━━━━━━━━━")
         
