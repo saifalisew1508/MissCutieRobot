@@ -188,12 +188,15 @@ def start(update: Update, context: CallbackContext):
     else:
             text = (
                 f"Hello {mention_html(user.id, user.first_name)}, I'm {bot.first_name}\n\n"
-                f"┏━━━━━━━━━━━━━━━━━━━\n"
+                f"┏━━━━━━━━━━━━━━\n"
                 f"┣[• Owner : @{OWNER_USERNAME}  \n"
                 f"┣[• Uptime : {uptime} \n"
                 f"┣[• Core : {psutil.cpu_percent()}%\n"
+                f"┣[• CPU : {cpu}% \n"
+                f"┣[• Disk : {disk}% \n"
+                f"┣[• Ram : {mem}% \n"
                 f"┣[• Python   : Ver {python_version()} \n"
-                f"┗━━━━━━━━━━━━━━━━━━━")
+                f"┗━━━━━━━━━━━━━━")
         
 
             keyboard = InlineKeyboardMarkup([
