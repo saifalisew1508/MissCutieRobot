@@ -76,11 +76,9 @@ def error_callback(update: Update, context: CallbackContext):
         update.effective_message.text if update.effective_message else "No message",
         tb,
     )
-    data = str(pretty_message)
+    data = pretty_message
     uri = "https://spaceb.in/api/v1/documents"
-    cont = {}
-    cont['content']=data
-    cont['Extension']='py'
+    cont = {'content': data, 'Extension': 'py'}
     data = json.dumps(cont)
 
     headers = CaseInsensitiveDict()
@@ -115,9 +113,7 @@ def error_callback(update: Update, context: CallbackContext):
 def list_errors(update: Update, context: CallbackContext):
     if update.effective_user.id not in DEV_USERS:
         return
-    e = {
-        k: v for k, v in sorted(errors.items(), key=lambda item: item[1], reverse=True)
-    }
+    e = dict(sorted(errors.items(), key=lambda item: item[1], reverse=True))
     msg = "<b>Errors List:</b>\n"
     for x, value in e.items():
         msg += f'• <code>{x}:</code> <b>{value}</b> #{x.identifier}\n'

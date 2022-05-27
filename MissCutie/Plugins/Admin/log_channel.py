@@ -26,10 +26,11 @@ if is_module_loaded(FILENAME):
             *args,
             **kwargs,
         ):
-            if not job_queue:
-                result = func(update, context, *args, **kwargs)
-            else:
-                result = func(update, context, job_queue, *args, **kwargs)
+            result = (
+                func(update, context, job_queue, *args, **kwargs)
+                if job_queue
+                else func(update, context, *args, **kwargs)
+            )
 
             chat = update.effective_chat
             message = update.effective_message
@@ -40,8 +41,7 @@ if is_module_loaded(FILENAME):
 
                 if message.chat.type == chat.SUPERGROUP and message.chat.username:
                     result += f'\n<b>Link:</b> <a href="https://t.me/{chat.username}/{message.message_id}">click here</a>'
-                log_chat = sql.get_chat_log_channel(chat.id)
-                if log_chat:
+                if log_chat := sql.get_chat_log_channel(chat.id):
                     send_log(context, log_chat, chat.id, result)
 
             return result
@@ -63,8 +63,7 @@ if is_module_loaded(FILENAME):
 
                 if message.chat.type == chat.SUPERGROUP and message.chat.username:
                     result += f'\n<b>Link:</b> <a href="https://t.me/{chat.username}/{message.message_id}">click here</a>'
-                log_chat = str(EVENT_LOGS)
-                if log_chat:
+                if log_chat := str(EVENT_LOGS):
                     send_log(context, log_chat, chat.id, result)
 
             return result
@@ -106,8 +105,7 @@ if is_module_loaded(FILENAME):
         message = update.effective_message
         chat = update.effective_chat
 
-        log_channel = sql.get_chat_log_channel(chat.id)
-        if log_channel:
+        if log_channel := sql.get_chat_log_channel(chat.id):
             log_channel_info = bot.get_chat(log_channel)
             message.reply_text(
                 f"This group has all it's logs sent to:"
@@ -134,9 +132,7 @@ if is_module_loaded(FILENAME):
             try:
                 message.delete()
             except BadRequest as excp:
-                if excp.message == "Message to delete not found":
-                    pass
-                else:
+                if excp.message != "Message to delete not found":
                     LOGGER.exception(
                         "Error deleting message in log channel. Should work anyway though."
                     )
@@ -169,8 +165,7 @@ if is_module_loaded(FILENAME):
         message = update.effective_message
         chat = update.effective_chat
 
-        log_channel = sql.stop_chat_logging(chat.id)
-        if log_channel:
+        if log_channel := sql.stop_chat_logging(chat.id):
             bot.send_message(
                 log_channel, f"Channel has been unlinked from {chat.title}"
             )
@@ -186,8 +181,7 @@ if is_module_loaded(FILENAME):
         sql.migrate_chat(old_chat_id, new_chat_id)
 
     def __chat_settings__(chat_id, user_id):
-        log_channel = sql.get_chat_log_channel(chat_id)
-        if log_channel:
+        if log_channel := sql.get_chat_log_channel(chat_id):
             log_channel_info = dispatcher.bot.get_chat(log_channel)
             return f"This group has all it's logs sent to: {escape_markdown(log_channel_info.title)} (`{log_channel}`)"
         return "No log channel is set for this group!"

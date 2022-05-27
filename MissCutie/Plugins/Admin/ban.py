@@ -112,11 +112,17 @@ def ban(update: Update, context: CallbackContext) -> str:
                 message.reply_to_message.delete()
             message.delete()
             return log
-        
-        unban_keyboard = InlineKeyboardMarkup([[
-            InlineKeyboardButton(
-                "🔘 Unban", callback_data="un_ban({})".format(user_id))
-        ]])
+
+        unban_keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🔘 Unban", callback_data=f"un_ban({user_id})"
+                    )
+                ]
+            ]
+        )
+
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
             f"<code>❕</code><b>Ban Event</b>\n"
@@ -155,19 +161,16 @@ def ban(update: Update, context: CallbackContext) -> str:
 def button(update: Update, context: CallbackContext) -> str:
     query: Optional[CallbackQuery] = update.callback_query
     user: Optional[User] = update.effective_user
-    match = re.match(r"un_ban\((.+?)\)", query.data)
-    
-    if match:
-        user_id = match.group(1)
+    if match := re.match(r"un_ban\((.+?)\)", query.data):
+        user_id = match[1]
         chat: Optional[Chat] = update.effective_chat
         user_member = chat.get_member(user_id)
-        unabnned = chat.unban_member(user_id)
-        if unabnned:
+        if unabnned := chat.unban_member(user_id):
             update.effective_message.edit_text(
                 f"User {mention_html(user_member.user.id, user_member.user.first_name)} Unbanned by {mention_html(user.id, user.first_name)}.",
                 parse_mode=ParseMode.HTML,
             )
-            
+
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#UNBANNED\n"
@@ -306,8 +309,7 @@ def punch(update: Update, context: CallbackContext) -> str:
         message.reply_text("I really wish I could punch this user....")
         return log_message
 
-    res = chat.unban_member(user_id)  # unban on current user = kick
-    if res:
+    if res := chat.unban_member(user_id):
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         bot.sendMessage(
             chat.id,
@@ -340,8 +342,7 @@ def punchme(update: Update, context: CallbackContext):
         update.effective_message.reply_text("I wish I could... but you're an admin.")
         return
 
-    res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
-    if res:
+    if res := update.effective_chat.unban_member(user_id):
         update.effective_message.reply_text("*punches you out of the group*")
     else:
         update.effective_message.reply_text("Huh? I can't :/")

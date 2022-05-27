@@ -43,23 +43,23 @@ async def antichannel_status(_, message: Message):
 
 
 
-@app.on_message(filters.text & ~filters.linked_channel, group=36)        
+@app.on_message(filters.text & ~filters.linked_channel, group=36)
 @app.on_message(filters.media & ~filters.linked_channel, group=36)
 @app.on_message(filters.sticker & ~filters.linked_channel, group=36)
 @app.on_message(filters.via_bot & ~filters.linked_channel, group=36)
 async def anitchnl(_, message):
-  chat_id = message.chat.id
-  if message.sender_chat:
-    sender = message.sender_chat.id 
+    if not message.sender_chat:
+        return
+    sender = message.sender_chat.id
+    chat_id = message.chat.id
     if message.chat.id not in active_channel:
         return
     if chat_id == sender:
         return
-    else:
-        await message.delete()
-        ti = await message.reply_text("**A anti-channel message detected. I deleted it..!**")
-        await asyncio.sleep(7)
-        await ti.delete()        
+    await message.delete()
+    ti = await message.reply_text("**A anti-channel message detected. I deleted it..!**")
+    await asyncio.sleep(7)
+    await ti.delete()        
 
 
 

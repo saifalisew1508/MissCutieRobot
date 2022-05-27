@@ -118,9 +118,8 @@ def flood_button(update: Update, context: CallbackContext):
     bot = context.bot
     query = update.callback_query
     user = update.effective_user
-    match = re.match(r"unmute_flooder\((.+?)\)", query.data)
-    if match:
-        user_id = match.group(1)
+    if match := re.match(r"unmute_flooder\((.+?)\)", query.data):
+        user_id = match[1]
         chat = update.effective_chat.id
         try:
             bot.restrict_chat_member(
@@ -246,25 +245,23 @@ def flood(update, context):
 
     limit = sql.get_flood_limit(chat_id)
     if limit == 0:
-        if conn:
-            text = msg.reply_text(
+        text = (
+            msg.reply_text(
                 f"I'm not enforcing any flood control in {chat_name}!",
             )
-        else:
-            text = msg.reply_text("I'm not enforcing any flood control here!")
+            if conn
+            else msg.reply_text("I'm not enforcing any flood control here!")
+        )
+
+    elif conn:
+        text = msg.reply_text(
+            f"I'm currently restricting members after {limit} consecutive messages in {chat_name}."
+        )
+
     else:
-        if conn:
-            text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages in {}.".format(
-                    limit, chat_name,
-                ),
-            )
-        else:
-            text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages.".format(
-                    limit,
-                ),
-            )
+        text = msg.reply_text(
+            f"I'm currently restricting members after {limit} consecutive messages."
+        )
 
 
 @user_admin
@@ -331,16 +328,14 @@ def set_flood_mode(update, context):
             return
         if conn:
             text = msg.reply_text(
-                "Exceeding consecutive flood limit will result in {} in {}!".format(
-                    settypeflood, chat_name,
-                ),
+                f"Exceeding consecutive flood limit will result in {settypeflood} in {chat_name}!"
             )
+
         else:
             text = msg.reply_text(
-                "Exceeding consecutive flood limit will result in {}!".format(
-                    settypeflood,
-                ),
+                f"Exceeding consecutive flood limit will result in {settypeflood}!"
             )
+
         return (
             "<b>{}:</b>\n"
             "<b>Admin:</b> {}\n"
@@ -364,16 +359,14 @@ def set_flood_mode(update, context):
             settypeflood = f"tmute for {getvalue}"
         if conn:
             text = msg.reply_text(
-                "Sending more messages than flood limit will result in {} in {}.".format(
-                    settypeflood, chat_name,
-                ),
+                f"Sending more messages than flood limit will result in {settypeflood} in {chat_name}."
             )
+
         else:
             text = msg.reply_text(
-                "Sending more message than flood limit will result in {}.".format(
-                    settypeflood,
-                ),
+                f"Sending more message than flood limit will result in {settypeflood}."
             )
+
     return ""
 
 

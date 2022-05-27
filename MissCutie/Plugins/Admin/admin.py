@@ -411,7 +411,7 @@ def setchat_title(update, context):
         return
 
     try:
-        context.bot.set_chat_title(int(chat.id), str(title))
+        context.bot.set_chat_title(int(chat.id), title)
         msg.reply_text(
             f"Successfully set <b>{title}</b> as new chat title!",
             parse_mode=ParseMode.HTML,
@@ -578,8 +578,8 @@ def invite(update: Update, context: CallbackContext):
  
 @connection_status
 def adminlist(update, context):
-    chat = update.effective_chat  
-    user = update.effective_user 
+    chat = update.effective_chat
+    user = update.effective_user
     args = context.args
     bot = context.bot
 
@@ -601,7 +601,7 @@ def adminlist(update, context):
         )
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "Admins in <b>{}</b>:".format(html.escape(update.effective_chat.title))
+    text = f"Admins in <b>{html.escape(update.effective_chat.title)}</b>:"
 
     bot_admin_list = []
 
@@ -615,9 +615,13 @@ def adminlist(update, context):
         else:
             name = "{}".format(
                 mention_html(
-                    user.id, html.escape(user.first_name + " " + (user.last_name or ""))
+                    user.id,
+                    html.escape(
+                        f"{user.first_name} " + ((user.last_name or ""))
+                    ),
                 )
             )
+
 
         if user.is_bot:
             bot_admin_list.append(name)
@@ -648,17 +652,19 @@ def adminlist(update, context):
         else:
             name = "{}".format(
                 mention_html(
-                    user.id, html.escape(user.first_name + " " + (user.last_name or ""))
+                    user.id,
+                    html.escape(
+                        f"{user.first_name} " + ((user.last_name or ""))
+                    ),
                 )
             )
-        # if user.username:
-        #    name = escape_markdown("@" + user.username)
+
         if status == "administrator":
             if custom_title:
                 try:
                     custom_admin_list[custom_title].append(name)
                 except KeyError:
-                    custom_admin_list.update({custom_title: [name]})
+                    custom_admin_list[custom_title] = [name]
             else:
                 normal_admin_list.append(name)
 
@@ -720,27 +726,25 @@ def unpinallbtn(update: Update, context: CallbackContext):
     reply = query.data.split("_")[1]
     if reply == 'yes':
         try:
-            unpinned =  bot.unpinAllChatMessages(chat.id)
-            if unpinned:
+            if unpinned := bot.unpinAllChatMessages(chat.id):
                 query.message.edit_text("Successfully unpinned all messages!")
             else:
                 query.message.edit_text("Failed to unpin all messages")
         except BadRequest as excp:
-            if excp.message == "Chat_not_modified":
-                pass
-            else:
+            if excp.message != "Chat_not_modified":
                 raise
-        
+
     else:
         query.message.edit_text("Unpin of all pinned messages has been cancelled.")
         return
-    log_message = "<b>{}:</b>" \
-                  "\n#UNPINNEDALL" \
-                  "\n<b>Admin:</b> {}".format(
-                      html.escape(chat.title),
-                      mention_html(user.id, user.first_name),
-                  )
-    return log_message
+    return (
+        "<b>{}:</b>"
+        "\n#UNPINNEDALL"
+        "\n<b>Admin:</b> {}".format(
+            html.escape(chat.title),
+            mention_html(user.id, user.first_name),
+        )
+    )
 
 __help__ = """
 Admins Play Major Roles To Manage A Group, We Have Created Some Hack Command In Our Bot So It Will Help To Manage Group Easily Via Bot.
