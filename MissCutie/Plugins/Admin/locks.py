@@ -93,11 +93,8 @@ PERM_GROUP = 1
 REST_GROUP = 2
 
 def alltypes():
-    lall = []
-    for i in LOCK_TYPES:
-        lall.append(i)
-    for i in LOCK_CHAT_RESTRICTION:
-        lall.append(i)
+    lall = list(LOCK_TYPES)
+    lall.extend(iter(LOCK_CHAT_RESTRICTION))
     return lall
 
 # NOT ASYNC
@@ -105,8 +102,6 @@ def restr_members(
     bot, chat_id, members, messages=False, media=False, other=False, previews=False,
 ):
     for mem in members:
-        if mem.user in INSPECTOR:
-            pass
         try:
             bot.restrict_chat_member(
                 chat_id,
@@ -166,17 +161,23 @@ def lock(update, context) -> str:
             #Support for lockname(s)
             memdata = alltypes()
 
-            if args[0].lower().endswith('s') and not args[0].lower() in memdata:
+            if (
+                args[0].lower().endswith('s')
+                and args[0].lower() not in memdata
+            ):
                 ltype = args[0].lower()[:-1]
-            elif not args[0].lower().endswith('s') and args[0].lower() + 's' in memdata:
-                ltype = args[0].lower() + 's'
+            elif (
+                not args[0].lower().endswith('s')
+                and f'{args[0].lower()}s' in memdata
+            ):
+                ltype = f'{args[0].lower()}s'
             else:
                 ltype = args[0].lower()
 
             if ltype in LOCK_TYPES:
-                # Connection check
-                conn = connected(context.bot, update, chat, user.id, need_admin=True)
-                if conn:
+                if conn := connected(
+                    context.bot, update, chat, user.id, need_admin=True
+                ):
                     chat = dispatcher.bot.getChat(conn)
                     chat_id = conn
                     chat_name = chat.title
@@ -207,15 +208,13 @@ def lock(update, context) -> str:
                 )
 
             elif ltype in LOCK_CHAT_RESTRICTION:
-                # Connection check
-                conn = connected(context.bot, update, chat, user.id, need_admin=True)
-                if conn:
+                if conn := connected(
+                    context.bot, update, chat, user.id, need_admin=True
+                ):
                     chat = dispatcher.bot.getChat(conn)
                     chat_id = conn
                     chat_name = chat.title
-                    text = "Locked {} for all non-admins in {}!".format(
-                        ltype, chat_name,
-                    )
+                    text = f"Locked {ltype} for all non-admins in {chat_name}!"
                 else:
                     if update.effective_message.chat.type == "private":
                         send_message(

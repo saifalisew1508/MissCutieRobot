@@ -68,10 +68,7 @@ def cb_sticker(update: Update, context: CallbackContext):
     if len(query) > 50:
         msg.reply_text("Provide a search query under 50 characters")
         return
-    if msg.from_user:
-        user_id = msg.from_user.id
-    else:
-        user_id = None
+    user_id = msg.from_user.id if msg.from_user else None
     text, buttons = get_cbs_data(query, 1, user_id)
     msg.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=buttons)
 
