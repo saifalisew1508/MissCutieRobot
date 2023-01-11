@@ -4,7 +4,7 @@ import os
 import html
 import requests
 import MissCutie.Database.chatbot_sql as sql
-from korax.chatbot import Kora
+from korax import Kora
 
 from time import sleep
 from telegram.constants import ParseMode
@@ -26,8 +26,8 @@ from MissCutie.Handlers.validation import user_admin, user_admin_no_reply
 from telegram.helpers import mention_html, mention_markdown, escape_markdown
 
 kora = Kora(KORA_API_TOKEN)
-owner = "kittu"
-botname = "kora"
+owner = "Saif"
+botname = "MissCutie"
 
 @user_admin_no_reply
 @gloggable
