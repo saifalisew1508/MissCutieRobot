@@ -5,10 +5,10 @@ This is part of @szrosebot so don't change anything....
 
 import asyncio
 from pyrogram import filters
-from rose import app
+from MissCutie import app
 from pyrogram.types import Message
-from rose import eor
-from rose.core.decorators.errors import capture_err
+from MissCutie import eor
+from MissCutie.core.decorators.errors import capture_err
 
 active_channel = []
 
