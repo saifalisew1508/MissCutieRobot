@@ -1,6 +1,9 @@
 import threading
+
 from sqlalchemy import Column, String
 from MissCutie.Database import BASE, SESSION
+
+
 class MissCutieChats(BASE):
     __tablename__ = "misscutie_chats"
     chat_id = Column(String(14), primary_key=True)
@@ -33,10 +36,3 @@ def rem_misscutie(chat_id):
         if misscutiechat:
             SESSION.delete(misscutiechat)
         SESSION.commit()
-
-
-def get_all_misscutie_chats():
-    try:
-        return SESSION.query(MissCutieChats.chat_id).all()
-    finally:
-        SESSION.close()
