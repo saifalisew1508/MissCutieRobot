@@ -3,7 +3,7 @@ import re
 import os
 import html
 import requests
-import .Database.chatbot_sql as sql
+import MissCutie.Database.chatbot_sql as sql
 from korax import Kora
 
 from time import sleep
