@@ -2,6 +2,9 @@ import logging, os, sys, time
 import telegram.ext as tg
 from telethon.sessions import MemorySession
 from telethon import TelegramClient
+from pyrogram import Client, errors
+from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
+from pyrogram.types import Chat, User
 
 
 StartTime = time.time()
@@ -105,6 +108,16 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 dispatcher = updater.dispatcher
+
+app = Client(
+    ":memory:",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+    workers=min(32, os.cpu_count() + 4),
+)
+apps = []
+apps.append(app)
 
 
 
