@@ -4,7 +4,7 @@ import os
 import html
 import requests
 import MissCutie.Database.chatbot_sql as sql
-from korax import Kora
+from korax.chatbot import Kora
 
 from time import sleep
 from telegram.constants import ParseMode
