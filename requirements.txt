@@ -27,3 +27,4 @@ wikipedia
 opencv-python--headless
 gtts
 korax
+pyrogram
