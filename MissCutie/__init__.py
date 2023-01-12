@@ -94,7 +94,7 @@ else:
     API_HASH = Config.API_HASH
     TOKEN = Config.TOKEN
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
-
+    BOT_ID = int(os.environ.get("BOT_ID", None))
     SUPPORT_CHAT = Config.SUPPORT_CHAT
 
 # WEBHOOK REQUERED THINGS
