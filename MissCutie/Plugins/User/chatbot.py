@@ -64,7 +64,7 @@ async def misscutieadd(update: Update, context: CallbackContext) -> str:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
         is_misscutie = sql.set_misscutie(chat.id)
-        if is_yone:
+        if is_misscutie:
             is_misscutie = sql.set_misscutie(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
@@ -128,7 +128,7 @@ async def chatbot(update: Update, context: CallbackContext):
         await message.reply_text(misscutie, timeout=60)
 
 async def list_all_chats(update: Update, context: CallbackContext):
-    chats = sql.get_all_yone_chats()
+    chats = sql.get_all_misscutie_chats()
     text = "<b>MISSCUTIE-Enabled Chats</b>\n"
     for chat in chats:
         try:
@@ -136,7 +136,7 @@ async def list_all_chats(update: Update, context: CallbackContext):
             name = x.title or x.first_name
             text += f"• <code>{name}</code>\n"
         except (BadRequest, Forbidden):
-            sql.rem_yone(*chat)
+            sql.rem_misscutie(*chat)
         except RetryAfter as e:
             sleep(e.retry_after)
     await update.effective_message.reply_text(text, parse_mode="HTML")
