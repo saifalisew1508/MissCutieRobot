@@ -66,7 +66,7 @@
        "required": true,
        "value": "league_of_bots"
     }, 
-    "KORA_API_TOKEN": {
+    "AI_API_KEY": {
       "description": "generate your kora api token from @Camille_Robot",
       "value": ""
    },  
