@@ -22,7 +22,7 @@ The easiest way to deploy this Bot
  
 CREDITS
 ```
-https://github.com/noob-kittu/YoneRobot.
+https://github.com/noob-kittu/YoneRobot
 
 ```
 
