@@ -27,8 +27,8 @@ from telegram.helpers import mention_html, mention_markdown, escape_markdown
 
 kora = Kora(KORA_API_TOKEN)
 owner = "Saif"
-botname = "MissCutie"
-
+botname = "kora"
+ 
 @user_admin_no_reply
 @gloggable
 async def misscutierm(update: Update, context: CallbackContext) -> str:
@@ -64,7 +64,7 @@ async def misscutieadd(update: Update, context: CallbackContext) -> str:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
         is_misscutie = sql.set_misscutie(chat.id)
-        if is_misscutie:
+        if is_yone:
             is_misscutie = sql.set_misscutie(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
@@ -108,7 +108,7 @@ async def misscutie_message(context: CallbackContext, message):
             return True
     else:
         return False
-
+        
 
 async def chatbot(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -117,7 +117,7 @@ async def chatbot(update: Update, context: CallbackContext):
     is_misscutie = sql.is_misscutie(chat_id)
     if not is_misscutie:
         return
-
+	
     if message.text and not message.document:
         if not misscutie_message(context, message):
             return
@@ -128,7 +128,7 @@ async def chatbot(update: Update, context: CallbackContext):
         await message.reply_text(misscutie, timeout=60)
 
 async def list_all_chats(update: Update, context: CallbackContext):
-    chats = sql.get_all_misscutie_chats()
+    chats = sql.get_all_yone_chats()
     text = "<b>MISSCUTIE-Enabled Chats</b>\n"
     for chat in chats:
         try:
@@ -136,7 +136,7 @@ async def list_all_chats(update: Update, context: CallbackContext):
             name = x.title or x.first_name
             text += f"• <code>{name}</code>\n"
         except (BadRequest, Forbidden):
-            sql.rem_misscutie(*chat)
+            sql.rem_yone(*chat)
         except RetryAfter as e:
             sleep(e.retry_after)
     await update.effective_message.reply_text(text, parse_mode="HTML")
@@ -151,7 +151,7 @@ __mod_name__ = "Chatbot"
 
 CHATBOTK_HANDLER = CommandHandler("ChatBot", misscutie )
 ADD_CHAT_HANDLER = CallbackQueryHandler(misscutieadd, pattern=r"add_chat" )
-RM_CHAT_HANDLER = CallbackQueryHandler(MISSCUTIErm, pattern=r"rm_chat" )
+RM_CHAT_HANDLER = CallbackQueryHandler(misscutierm, pattern=r"rm_chat" )
 CHATBOT_HANDLER = MessageHandler(
     filters.TEXT & (filters.Regex(r"^#[^\s]+") & filters.Regex(r"^!")
                     & filters.Regex(r"^\/")), chatbot )
