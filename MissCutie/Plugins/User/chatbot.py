@@ -1,13 +1,14 @@
 import re
 import requests
 from time import sleep
-from MissCutie import AI_API_KEY, BOT_ID, dispatcher
+from MissCutie import AI_API_KEY, dispatcher
 from MissCutie.Handlers.validation import bot_admin, is_user_admin, user_admin
 from MissCutie.Handlers.filters import CustomFilters
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, Filters, MessageHandler, run_async
 
 Kristina_chats = []
+BOT_ID = 5071423206
 
 @user_admin
 def chatbot_toggle(update: Update, context: CallbackContext):
