@@ -4,7 +4,7 @@ from MissCutie import dispatcher
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 import html
-from MissCutie.disable import DisableAbleCommandHandler
+from MissCutie.Plugins.disable import DisableAbleCommandHandler
 from MissCutie.Database.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
 from MissCutie.Handlers.validation import user_admin
 
