@@ -26,5 +26,5 @@ telegraph
 wikipedia
 opencv-python--headless
 gtts
-korax==0.1
 pyrogram
+TgCrypto
