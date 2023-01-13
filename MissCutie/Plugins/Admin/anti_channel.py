@@ -68,7 +68,7 @@ def anti_c_mode_on(update: Update, context: CallbackContext) -> str:
 
 @user_admin
 @gloggable
-def misscutie(update: Update, context: CallbackContext):
+def antichannel(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
     msg = f"Choose an option"
