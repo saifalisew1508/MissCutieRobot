@@ -59,8 +59,3 @@ Through this menu you can set a punishment for users who write in the group masq
 
 __mod_name__ = "Anti-Channel"
 __command_list__ = ["antichannel", "antichannelon", "antichanneloff"]
-__handlers__ = [
-    ANTICHANNEL_PANEL_COMMAND_HANDLER,
-    ANTICHANNEL_ON_COMMAND_HANDLER,
-    ANTICHANNEL_OFF_COMMAND_HANDLER,
-]
