@@ -54,7 +54,8 @@ Through this menu you can set a punishment for users who write in the group masq
 🏃🏻 If this option is active, a user who was writing via a channel will only be able to continue writing to the group but only via his real identity and no longer via other channels.
 *Commands:*
 *Admins only:*
-➢ `/antichannel`*:* Shows Anti-Channel control panel
+➢ `/antichannel on`*:* Anti-Channel service on
+➢ `/antichannel off`*:* Anti-Channel service off
 """
 
 __mod_name__ = "Anti-Channel"
