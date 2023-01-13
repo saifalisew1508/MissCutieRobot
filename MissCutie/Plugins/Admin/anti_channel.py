@@ -1,91 +1,47 @@
-import re, html
-from telegram import ParseMode, Update
-from telegram.ext import (
-    CallbackContext,
-    CommandHandler,
-    Filters,
-    MessageHandler,
-    run_async,
-)
-from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
-from MissCutie.Handlers.validation import user_admin, user_admin_no_reply
-from MissCutie.Plugins.Admin.log_channel import gloggable
-
-
-
-
-@user_admin_no_reply
-@gloggable
-def anti_c_mode_off(update: Update, context: CallbackContext) -> str:
-    query: Optional[CallbackQuery] = update.callback_query
-    user: Optional[User] = update.effective_user
-    match = re.match(r"rm_mode\((.+?)\)", query.data)
-    if match:
-        user_id = match.group(1)
-        chat: Optional[Chat] = update.effective_chat
-        is_channel = sql.rem_channel(chat.id)
-        if is_channel:
-            is_channel = sql.rem_channel(user_id)
-            return (
-                f"<b>{html.escape(chat.title)}:</b>\n"
-                f"ANTI_CHANNEL_MODE_DISABLED\n"
-                f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            )
-        else:
-            update.effective_message.edit_text(
-                "Anti Channel Mode disable by {}.".format(mention_html(user.id, user.first_name)),
-                parse_mode=ParseMode.HTML,
-            )
-
-    return ""
-
-
-
-@user_admin_no_reply
-@gloggable
-def anti_c_mode_on(update: Update, context: CallbackContext) -> str:
-    query: Optional[CallbackQuery] = update.callback_query
-    user: Optional[User] = update.effective_user
-    match = re.match(r"add_channel\((.+?)\)", query.data)
-    if match:
-        user_id = match.group(1)
-        chat: Optional[Chat] = update.effective_chat
-        is_channel = sql.set_misscutie(chat.id)
-        if is_channel:
-            is_channel = sql.set_misscutie(user_id)
-            return (
-                f"<b>{html.escape(chat.title)}:</b>\n"
-                f"AI_ENABLE\n"
-                f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            )
-        else:
-            update.effective_message.edit_text(
-                "Anti-Channel enable by {}.".format(mention_html(user.id, user.first_name)),
-                parse_mode=ParseMode.HTML,
-            )
-
-    return ""
+from telegram.ext.filters import Filters
+from telegram import Update, message
+from MissCutie import dispatcher
+from telegram.ext import CallbackContext, CommandHandler
+from telegram.ext.messagehandler import MessageHandler
+import html
+from MissCutie.modules.disable import DisableAbleCommandHandler
+from MissCutie.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
+from MissCutie.Handlers.validation import user_admin
 
 @user_admin
-@gloggable
-def antichannel(update: Update, context: CallbackContext):
-    user = update.effective_user
+def set_antichannel(update: Update, context: CallbackContext):
     message = update.effective_message
-    msg = f"Choose an option"
-    keyboard = InlineKeyboardMarkup([[
-        InlineKeyboardButton(
-            text="Enable",
-            callback_data="anti_c_mode_on")],
-       [
-        InlineKeyboardButton(
-            text="Disable",
-            callback_data="anti_c_mode_off")]])
-    message.reply_text(
-        msg,
-        reply_markup=keyboard,
-        parse_mode=ParseMode.HTML,
-    )
+    chat = update.effective_chat
+    args = context.args
+    if len(args) > 0:
+        s = args[0].lower()
+        if s in ["yes", "on"]:
+            enable_antichannel(chat.id)
+            message.reply_html("Enabled antichannel in {}".format(html.escape(chat.title)))
+        elif s in ["off", "no"]:
+            disable_antichannel(chat.id)
+            message.reply_html("Disabled antichannel in {}".format(html.escape(chat.title)))
+        else:
+            message.reply_text("Unrecognized arguments {}".format(s))
+        return
+    message.reply_html(
+        "Antichannel setting is currently {} in {}".format(antichannel_status(chat.id), html.escape(chat.title)))
 
+def eliminate(update: Update, context: CallbackContext):
+    message = update.effective_message
+    chat = update.effective_chat
+    bot = context.bot
+    if not antichannel_status(chat.id):
+        return
+    if message.sender_chat and message.sender_chat.type == "channel" and not message.is_automatic_forward:
+        message.delete()
+        sender_chat = message.sender_chat
+        bot.ban_chat_sender_chat(sender_chat_id=sender_chat.id, chat_id=chat.id)
+        
+dispatcher.add_handler(MessageHandler(filters=Filters.chat_type.groups, callback=eliminate), group=101)
+dispatcher.add_handler(
+    CommandHandler(command="antichannel", callback=set_antichannel, run_async=True, filters=Filters.chat_type.groups),
+    group=100)
 
 
 __help__ = f"""
@@ -100,19 +56,6 @@ Through this menu you can set a punishment for users who write in the group masq
 *Admins only:*
 ➢ `/antichannel`*:* Shows Anti-Channel control panel
 """
-
-
-
-ANTICHANNEL_PANEL_COMMAND_HANDLER = CommandHandler("antichannel", run_async=True)
-ANTICHANNEL_ON_COMMAND_HANDLER = CommandHandler("antichannelon", anti_c_mode_on, run_async=True)
-ANTICHANNEL_OFF_COMMAND_HANDLER = CommandHandler("antichanneloff", anti_c_mode_off, run_async=True)
-
-
-# Filters for ignoring #note messages, !commands and sed.
-
-dispatcher.add_handler(ANTICHANNEL_PANEL_COMMAND_HANDLER)
-dispatcher.add_handler(ANTICHANNEL_ON_COMMAND_HANDLER)
-dispatcher.add_handler(ANTICHANNEL_OFF_COMMAND_HANDLER)
 
 __mod_name__ = "Anti-Channel"
 __command_list__ = ["antichannel", "antichannelon", "antichanneloff"]
