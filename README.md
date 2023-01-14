@@ -18,9 +18,8 @@
   <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
 
-
-# MissCutie
-Me On Telegram [✨MissCutie✨](https://t.me/MissCutie_Bot)
+# MEET AT TELEGRAM
+✨MissCutie✨ [https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white](https://t.me/MissCutie_Bot)
 
 </details>
 <details><summary><h3>How To Host</h3></summary>
