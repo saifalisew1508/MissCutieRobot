@@ -7,7 +7,7 @@ from MissCutie import dispatcher
 from MissCutie.Plugins.disable import DisableAbleCommandHandler
 
 
-@run_async
+
 def lyrics(bot: Bot, update: Update, args):
     msg = update.effective_message
     query = " ".join(args)
@@ -42,10 +42,10 @@ Want to get the lyrics of your favorite songs straight from the app? This module
  You can either enter just the song name or both the artist and song name.
 """
 
-__mod_name__ = "LYRICS"
+__mod_name__ = "Lyrics"
 
 
 
-LYRICS_HANDLER = DisableAbleCommandHandler("lyrics", lyrics, pass_args=True)
+LYRICS_HANDLER = DisableAbleCommandHandler("lyrics", lyrics, run_async=True)
 
 dispatcher.add_handler(LYRICS_HANDLER)
