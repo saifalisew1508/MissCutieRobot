@@ -18,12 +18,13 @@
   <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
 
-# MEET AT TELEGRAM
+</details>
+<details><summary><h3>START HERE</h3></summary>
 
 <p align="center">
 <a target="_blank"href="https://t.me/MissCutie_Bot"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
-
+</details>
 </details>
 <details><summary><h3>How To Host</h3></summary>
 The easiest way to deploy this Bot
