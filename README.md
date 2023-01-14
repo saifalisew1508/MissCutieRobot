@@ -38,7 +38,9 @@ The easiest way to deploy this Bot
 
 <details><summary><h3>𝗖𝗥𝗘𝗗𝗜𝗧😎</h3></summary>
   
- Credit - [YONE☢️](https://github.com/noob-kittu/YoneRobot)
+  # <p align="center"><a href="https://github.com/noob-kittu/YoneRobot"><img src="https://github-readme-stats.vercel.app/api/pin?username=noob-kittu&show_icons=true&theme=dracula&hide_border=true&repo=YoneRobot"></a></p>
+
+<p align="center">
 
 </details>
 
