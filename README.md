@@ -14,15 +14,10 @@
 </p>
 </details>
 
-</details>
-
-<details><summary><h3>MISS CUTIE IMAGE</h3></summary>
-
 <p align="center">
   <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
 
-</detail>
 
 # MissCutie
 Me On Telegram [✨MissCutie✨](https://t.me/MissCutie_Bot)
@@ -35,7 +30,7 @@ The easiest way to deploy this Bot
 
 <details><summary><h3>𝗖𝗥𝗘𝗗𝗜𝗧</h3></summary>
   
-  [![Credit](𝗬𝗢𝗡𝗘 𝗢𝗪𝗡𝗘𝗥 - 𝗞𝗜𝗧𝗧𝗨)](https://github.com/noob-kittu/YoneRobot)
+ ##Credit - https://github.com/noob-kittu/YoneRobot
 
 </details>
 
