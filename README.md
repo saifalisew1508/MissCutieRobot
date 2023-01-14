@@ -21,10 +21,6 @@
 </p>
 </details>
 
-<p align="center">
-  <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
-</p>
-
 </details>
 <details><summary><h3>START HERE</h3></summary>
 
