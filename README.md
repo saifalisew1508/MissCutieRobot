@@ -13,9 +13,16 @@
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 </details>
+
+</details>
+
+<details><summary><h3>MISS CUTIE IMAGE</h3></summary>
+
 <p align="center">
   <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
+
+</detail>
 
 # MissCutie
 Me On Telegram [✨MissCutie✨](https://t.me/MissCutie_Bot)
