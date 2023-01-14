@@ -28,3 +28,4 @@ opencv-python--headless
 gtts
 pyrogram
 TgCrypto
+speedtest-cli
