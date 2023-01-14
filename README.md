@@ -2,9 +2,6 @@
 
 <details><summary><h3>STATS🏆</h3></summary>
   
-  [![Github Trophies](https://github-profile-trophy.vercel.app/?username=sahill-op&theme=green&dark=true&margin-w=15&margin-h=10&row=1&column=6&count_private=true)](https://sahill-op.github.io/sahil-op.github.io/)
-
-
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
 </p>
