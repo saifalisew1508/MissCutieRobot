@@ -1,10 +1,16 @@
+<p align="center">
+𝗧𝗛𝗘 𝗠𝗢𝗦𝗧 𝗣𝗢𝗪𝗘𝗥𝗙𝗨𝗟 𝗔𝗡𝗗 𝗔𝗡𝗜𝗠𝗘 𝗧𝗛𝗘𝗠𝗘 𝗕𝗢𝗧❤🖤
+</p>
+
+<p align="center">
+    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
+</p>
+
 </details>
 
 <details><summary><h3>BOT STATS🏆</h3></summary>
   
-<p align="center">
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
-</p>
+
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot/commits"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutieRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
