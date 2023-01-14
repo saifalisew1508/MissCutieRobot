@@ -859,7 +859,7 @@ UNPINALL_BTN_HANDLER = CallbackQueryHandler(unpinallbtn, pattern=r"unpinallbtn_"
 
 
 INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite, run_async=True)
-LOW_PROMOTE_HANDLER = DisableAbleCommandHandler(admin", lowpromote, run_async=True)
+LOW_PROMOTE_HANDLER = DisableAbleCommandHandler("admin", lowpromote, run_async=True)
 PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote, run_async=True)
 FULL_PROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote, run_async=True)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote, run_async=True)
