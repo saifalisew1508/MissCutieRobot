@@ -1,3 +1,10 @@
+</details>
+
+<details><summary><h3>STATS🏆</h3></summary>
+  
+  [![Github Trophies](https://github-profile-trophy.vercel.app/?username=sahill-op&theme=green&dark=true&margin-w=15&margin-h=10&row=1&column=6&count_private=true)](https://sahill-op.github.io/sahil-op.github.io/)
+
+
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
 </p>
@@ -8,7 +15,7 @@
     <a href="https://github.com/saifalisew1508/MissCutieRobot/network/members"> <img src="https://img.shields.io/github/forks/saifalisew1508/MissCutieRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
-
+</details>
 <p align="center">
   <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
