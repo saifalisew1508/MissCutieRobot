@@ -1,6 +1,6 @@
 </details>
 
-<details><summary><h3>STATS🏆</h3></summary>
+<details><summary><h3>BOT STATS🏆</h3></summary>
   
 <p align="center">
     <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
