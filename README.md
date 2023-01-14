@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
+  <img src="https://te.legra.ph/file/f2b0a5b123b8c6de9cb39.jpg">
 </p>
 
 </details>
@@ -12,6 +12,7 @@
   
 
 <p align="center">
+    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot/commits"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutieRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/saifalisew1508/MissCutieRobot/issues"> <img src="https://img.shields.io/github/issues/saifalisew1508/MissCutieRobot?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
