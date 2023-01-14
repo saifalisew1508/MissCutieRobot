@@ -95,7 +95,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b> As Admin!\nBy {mention_html(user_member.user.id, user_member.user.first_name)}",
+        f"Sucessfully promoted <b>{mention_html(user.id, user.first_name)}</b> As Admin!\nBy {mention_html(user_member.user.id, user_member.user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
