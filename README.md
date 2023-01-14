@@ -22,11 +22,13 @@
 # MissCutie
 Me On Telegram [✨MissCutie✨](https://t.me/MissCutie_Bot)
 
-## How To Host
+</details>
+<details><summary><h3>How To Host</h3></summary>
 The easiest way to deploy this Bot
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
- 
+ </details>
 
+</details>
 
 <details><summary><h3>𝗖𝗥𝗘𝗗𝗜𝗧</h3></summary>
   
