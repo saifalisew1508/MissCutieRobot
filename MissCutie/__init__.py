@@ -62,7 +62,7 @@ if ENV:
     WORKERS = int(os.environ.get("WORKERS", 8))
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-
+    MESSAGE_DUMP = os.environ.get("MESSAGE_DUMP", None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
