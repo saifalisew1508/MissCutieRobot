@@ -30,7 +30,7 @@ The easiest way to deploy this Bot
 
 <details><summary><h3>𝗖𝗥𝗘𝗗𝗜𝗧</h3></summary>
   
- ##Credit - https://github.com/noob-kittu/YoneRobot
+ #Credit - https://github.com/noob-kittu/YoneRobot
 
 </details>
 
