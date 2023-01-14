@@ -19,7 +19,10 @@
 </p>
 
 # MEET AT TELEGRAM
-✨MissCutie✨ [https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white](https://t.me/MissCutie_Bot)
+
+<p align="center">
+<a target="_blank"href="https://t.me/MissCutie_Bot"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
 
 </details>
 <details><summary><h3>How To Host</h3></summary>
