@@ -95,7 +95,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b> with full rights!",
+        f"Sucessfully promoted <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b> As Admin!\nBy {mention_html(user_member.user.id, user_member.user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
@@ -180,7 +180,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"Sucessfully promoted <b>{{mention_html(user_member.user.id, user_member.user.first_name)}</b> As Admin!\nBy {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
@@ -263,13 +263,13 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b> with full rights!",
+        f"Sucessfully promoted <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b> with full rights!\nBy {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"USER PROMOTED SUCCESSFULLY\n"
+        f"USER PROMOTED SUCCESSFULLY WITH FULL RIGHTS\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
@@ -332,7 +332,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"Sucessfully demoted <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>!",
             parse_mode=ParseMode.HTML,
         )
 
