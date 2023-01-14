@@ -12,7 +12,6 @@ def convert(speed):
 
 
 @support_plus
-@run_async
 def speedtestxyz(bot: Bot, update: Update):
     buttons = [
         [InlineKeyboardButton("Image", callback_data="speedtest_image"), InlineKeyboardButton("Text", callback_data="speedtest_text")]
@@ -21,7 +20,7 @@ def speedtestxyz(bot: Bot, update: Update):
                                         reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@run_async
+
 def speedtestxyz_callback(bot: Bot, update: Update):
     query = update.callback_query
 
@@ -46,8 +45,8 @@ def speedtestxyz_callback(bot: Bot, update: Update):
         query.answer("You are required to join Dev Association to use this command.")
 
 
-SPEED_TEST_HANDLER = DisableAbleCommandHandler("speedtest", speedtestxyz)
-SPEED_TEST_CALLBACKHANDLER = CallbackQueryHandler(speedtestxyz_callback, pattern='speedtest_.*')
+SPEED_TEST_HANDLER = DisableAbleCommandHandler("speedtest", speedtestxyz, run_async=True)
+SPEED_TEST_CALLBACKHANDLER = CallbackQueryHandler(speedtestxyz_callback, pattern='speedtest_.*', run_async=True)
 
 dispatcher.add_handler(SPEED_TEST_HANDLER)
 dispatcher.add_handler(SPEED_TEST_CALLBACKHANDLER)
