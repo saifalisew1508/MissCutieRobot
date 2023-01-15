@@ -2,7 +2,7 @@ import math
 from typing import List
 import requests
 import pynewtonmath as newton
-from MissCutie import dispatcher
+from MissCutie import dispatcher, BOT_ID, BOT_NAME, BOT_USERNAME
 from MissCutie.Plugins.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
@@ -96,9 +96,13 @@ def log(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
     message.reply_text(math.log(int(args[0])))
-    
-    
-    __help__ = """
+
+
+
+__mod_name__ = "Math"
+
+
+__help__ = """
 Solves complex math problems using https://newton.now.sh
  - /math: Simplify `/simplify 2^2+2(2)`
  - /factor: Factor `/factor x^2 + 2x`
@@ -119,11 +123,6 @@ __Keep in mind__: To find the tangent line of a function at a certain x value, s
 To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values.
 To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).
 """
-
-
-
-__mod_name__ = "Math"
-
 
 
 SIMPLIFY_HANDLER = DisableAbleCommandHandler("math", simplify, run_async=True)
