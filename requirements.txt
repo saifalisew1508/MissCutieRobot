@@ -30,3 +30,4 @@ pyrogram
 TgCrypto
 speedtest-cli
 tswift
+pynewtonmath
