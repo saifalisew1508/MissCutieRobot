@@ -1,10 +1,11 @@
 import math
-
+from typing import List
+import requests
 import pynewtonmath as newton
 from MissCutie import dispatcher
 from MissCutie.Plugins.disable import DisableAbleCommandHandler
 from telegram import Update
-from telegram.ext import CallbackContext, run_async
+from telegram.ext import CallbackContext, CommandHandler, run_async
 
 
 def simplify(update: Update, context: CallbackContext):
