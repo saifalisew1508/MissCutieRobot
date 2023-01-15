@@ -95,9 +95,35 @@ def log(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
     message.reply_text(math.log(int(args[0])))
+    
+    
+    __help__ = """
+Solves complex math problems using https://newton.now.sh
+ - /math: Simplify `/simplify 2^2+2(2)`
+ - /factor: Factor `/factor x^2 + 2x`
+ - /derive: Derive `/derive x^2+2x`
+ - /integrate: Integrate `/integrate x^2+2x`
+ - /zeroes: Find 0's `/zeroes x^2+2x`
+ - /tangent: Find Tangent `/tangent 2lx^3`
+ - /area: Area Under Curve `/area 2:4lx^3`
+ - /cos: Cosine `/cos pi`
+ - /sin: Sine `/sin 0`
+ - /tan: Tangent `/tan 0`
+ - /arccos: Inverse Cosine `/arccos 1`
+ - /arcsin: Inverse Sine `/arcsin 0`
+ - /arctan: Inverse Tangent `/arctan 0`
+ - /abs: Absolute Value `/abs -1`
+ - /log: Logarithm `/log 2l8`
+__Keep in mind__: To find the tangent line of a function at a certain x value, send the request as c|f(x) where c is the given x value and f(x) is the function expression, the separator is a vertical bar '|'. See the table above for an example request.
+To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values.
+To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).
+"""
+
 
 
 __mod_name__ = "Math"
+
+
 
 SIMPLIFY_HANDLER = DisableAbleCommandHandler("math", simplify, run_async=True)
 FACTOR_HANDLER = DisableAbleCommandHandler("factor", factor, run_async=True)
@@ -113,7 +139,7 @@ ARCCOS_HANDLER = DisableAbleCommandHandler("arccos", arccos, run_async=True)
 ARCSIN_HANDLER = DisableAbleCommandHandler("arcsin", arcsin, run_async=True)
 ARCTAN_HANDLER = DisableAbleCommandHandler("arctan", arctan, run_async=True)
 ABS_HANDLER = DisableAbleCommandHandler("abs", abs, run_async=True)
-LOG_HANDLER = DisableAbleCommandHandler("log", log, run_async=True)
+LOG_HANDLER = DisableAbleCommandHandler("abs", log, run_async=True)
 
 dispatcher.add_handler(SIMPLIFY_HANDLER)
 dispatcher.add_handler(FACTOR_HANDLER)
@@ -130,3 +156,6 @@ dispatcher.add_handler(ARCSIN_HANDLER)
 dispatcher.add_handler(ARCTAN_HANDLER)
 dispatcher.add_handler(ABS_HANDLER)
 dispatcher.add_handler(LOG_HANDLER)
+
+
+__command_list__ = ["math", "factor", "derive", "integrate", "zeroes", "tangent", "area", "cos", "sin", "tan", "arccos", "arcsin", "arctan", "abs", "abs"]
