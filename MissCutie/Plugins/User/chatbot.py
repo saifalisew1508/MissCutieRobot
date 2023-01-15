@@ -25,7 +25,7 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 
 import MissCutie.Database.chatbot_sql as sql
-from MissCutie import dispatcher
+from MissCutie import dispatcher, BOT_ID, BOT_NAME, BOT_USERNAME
 from MissCutie.Handlers.validation import user_admin, user_admin_no_reply
 from MissCutie.Handlers.filters import CustomFilters
 from MissCutie.Plugins.Admin.log_channel import gloggable
