@@ -110,6 +110,11 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 dispatcher = updater.dispatcher
 
+
+pbot = Client("MissCutie", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+dispatcher = updater.dispatcher
+aiohttpsession = ClientSession()
+
 BOT_ID = dispatcher.bot.id
 BOT_NAME = dispatcher.bot.first_name
 BOT_USERNAME = dispatcher.bot.username
