@@ -2,6 +2,7 @@ import logging, os, sys, time
 import telegram.ext as tg
 from telethon.sessions import MemorySession
 from telethon import TelegramClient
+from aiohttp import ClientSession
 from pyrogram import Client, errors
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
