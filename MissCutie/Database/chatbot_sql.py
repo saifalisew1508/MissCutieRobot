@@ -36,7 +36,6 @@ def set_fallen(chat_id):
 
 def rem_fallen(chat_id):
     with INSERTION_LOCK:
-        fallenchat = SESSION.query(FallenChats).get(str(chat_id))
-        if fallenchat:
+        if fallenchat := SESSION.query(FallenChats).get(str(chat_id)):
             SESSION.delete(fallenchat)
         SESSION.commit()

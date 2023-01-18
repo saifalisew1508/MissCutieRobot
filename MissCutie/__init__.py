@@ -127,8 +127,7 @@ app = Client(
     bot_token=TOKEN,
     workers=min(32, os.cpu_count() + 4),
 )
-apps = []
-apps.append(app)
+apps = [app]
 
 
 

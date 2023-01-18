@@ -17,15 +17,16 @@ def set_antichannel(update: Update, context: CallbackContext):
         s = args[0].lower()
         if s in ["yes", "on"]:
             enable_antichannel(chat.id)
-            message.reply_html("Enabled antichannel in {}".format(html.escape(chat.title)))
+            message.reply_html(f"Enabled antichannel in {html.escape(chat.title)}")
         elif s in ["off", "no"]:
             disable_antichannel(chat.id)
-            message.reply_html("Disabled antichannel in {}".format(html.escape(chat.title)))
+            message.reply_html(f"Disabled antichannel in {html.escape(chat.title)}")
         else:
-            message.reply_text("Unrecognized arguments {}".format(s))
+            message.reply_text(f"Unrecognized arguments {s}")
         return
     message.reply_html(
-        "Antichannel setting is currently {} in {}".format(antichannel_status(chat.id), html.escape(chat.title)))
+        f"Antichannel setting is currently {antichannel_status(chat.id)} in {html.escape(chat.title)}"
+    )
 
 def eliminate(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -44,7 +45,7 @@ dispatcher.add_handler(
     group=100)
 
 
-__help__ = f"""
+__help__ = """
 Through this menu you can set a punishment for users who write in the group masquerading as a channel.
 
 ℹ️ Telegram allows each user to write to the group by hiding through a channel they own.
