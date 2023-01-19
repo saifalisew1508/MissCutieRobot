@@ -33,9 +33,6 @@ def music(update: Update, context: CallbackContext):
     if len(args) == 1:
         message.reply_text('Provide Song Name also like `/song on my way`!')
         return
-    else:
-        pass
-
     urlissed = args[1]
 
     pablo = bot.send_message(
@@ -123,9 +120,6 @@ def video(update: Update, context: CallbackContext):
     if len(args) == 1:
         message.reply_text('Provide video Name also like `/video on my way`!')
         return
-    else:
-        pass
-
     urlissed = args[1]
 
     pablo = bot.send_message(
@@ -197,18 +191,14 @@ def video(update: Update, context: CallbackContext):
             
 def lyrics(bot: Bot, update: Update, args):
     msg = update.effective_message
-    query = " ".join(args)
-    song = ""
-    if not query:
-        msg.reply_text("You haven't specified which song to look for!")
-        return
-    else:
-        song = Song.find_song(query)
-        if song:
-            if song.lyrics:
-                reply = song.format()
-            else:
-                reply = "Couldn't find any lyrics for that song!"
+    if query := " ".join(args):
+        song = ""
+        if song := Song.find_song(query):
+            reply = (
+                song.format()
+                if song.lyrics
+                else "Couldn't find any lyrics for that song!"
+            )
         else:
             reply = "Song not found!"
         if len(reply) > 4090:
@@ -219,6 +209,10 @@ def lyrics(bot: Bot, update: Update, args):
                 caption="Message length exceeded max limit! Sending as a text file.")
         else:
             msg.reply_text(reply)
+
+    else:
+        msg.reply_text("You haven't specified which song to look for!")
+        return
                 
 
 
