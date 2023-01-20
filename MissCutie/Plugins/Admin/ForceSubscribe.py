@@ -14,7 +14,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from MissCutie import OWNER_ID
+from MissCutie import OWNER_ID, BOT_ID, BOT_NAME, BOT_USERNAME
 from MissCutie import pbot
 from MissCutie.Database import forceSubscribe_sql as sql
 
