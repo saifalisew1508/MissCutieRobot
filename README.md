@@ -11,13 +11,17 @@
 <details><summary><h3>BOT STATS🏆</h3></summary>
   
 
-<p align="center">
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/stargazers"><img src="https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?label=Stars&style=flat-square&logo=github&color=F10070" alt="Stars" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutieRobot"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/commits"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutieRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/issues"> <img src="https://img.shields.io/github/issues/saifalisew1508/MissCutieRobot?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutieRobot/network/members"> <img src="https://img.shields.io/github/forks/saifalisew1508/MissCutieRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
-    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
+[![](https://img.shields.io/badge/MissCutie-v1.0-darkgreen)](#)
+[![Stars](https://img.shields.io/github/stars/saifalisew1508/MissCutieRobot?style=flat-square&color=yellow)](https://github.com/saifalisew1508/MissCutieRobot/stargazers)
+[![Forks](https://img.shields.io/github/forks/saifalisew1508/MissCutieRobot?style=flat-square&color=orange)](https://github.com/saifalisew1508/MissCutieRobot/fork)
+[![Size](https://img.shields.io/github/repo-size/saifalisew1508/MissCutieRobot?style=flat-square&color=green)](https://github.com/saifalisew1508/MissCutieRobot)   
+[![PTB](https://img.shields.io/badge/PTB-v13.9-blue)](https://docs.python-telegram-bot.org/)
+[![Telethon](https://img.shields.io/badge/Telethon-1.24.0-blue)](https://docs.telethon.dev/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/saifalisew1508/MissCutieRobot/graphs/commit-activity)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/saifalisew1508/MissCutieRobot)
+[![Contributors](https://img.shields.io/github/contributors/saifalisew1508/MissCutieRobot?style=flat-square&color=green)](https://github.com/saifalisew1508/MissCutieRobot/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)  
+[![Sparkline](https://stars.medv.io/saifalisew1508/MissCutieRobot.svg)](https://stars.medv.io/saifalisew1508/MissCutieRobot)
 </p>
 </details>
 
