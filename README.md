@@ -42,8 +42,16 @@
 
 <details><summary><h3>𝗖𝗥𝗘𝗗𝗜𝗧😎</h3></summary>
   
-  # <p align="center"><a href="https://github.com/noob-kittu/YoneRobot"><img src="https://github-readme-stats.vercel.app/api/pin?username=noob-kittu&show_icons=true&theme=dracula&hide_border=true&repo=YoneRobot"></a></p>
+<p align="center"><a href="https://github.com/noob-kittu/YoneRobot"><img src="https://github-readme-stats.vercel.app/api/pin?username=noob-kittu&show_icons=true&theme=dracula&hide_border=true&repo=YoneRobot"></a></p>
 
+<p align="center">
+
+</details>
+
+
+<details><summary><h3>𝗩𝗜𝗦𝗜𝗧𝗢𝗥𝗦 𝗖𝗢𝗨𝗡𝗧😎</h3></summary>
+  
+<a href="https://github.com/saifalisew1508/MissCutieRobot"><img alt="CuteCount" src="https://count.getloli.com/get/@MissCutieRobot?theme=rule34" /></a>
 <p align="center">
 
 </details>
