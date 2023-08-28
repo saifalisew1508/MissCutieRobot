@@ -1,5 +1,5 @@
 aiohttp
-cachetools==4.2.2
+cachetools==4.2.4
 python-telegram-bot==13.9
 Telethon==1.24.0
 pyrate-limiter
