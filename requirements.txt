@@ -29,7 +29,7 @@ importlib-metadata==6.0.0
 isort==5.11.5
 lazy-object-proxy==1.9.0
 lyricsgenius==3.0.1
-lxml==4.9.1; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0"
+lxml==4.9.3; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0"
 mccabe==0.7.0
 mypy-extensions==1.0.0
 nodeenv==1.7.0
