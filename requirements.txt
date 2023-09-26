@@ -1,6 +1,6 @@
 aiohttp
 cachetools==4.2.2
-python-telegram-bot==13.9
+python-telegram-bot==13.15
 Telethon==1.24.0
 pyrate-limiter
 sqlalchemy==1.4.11
