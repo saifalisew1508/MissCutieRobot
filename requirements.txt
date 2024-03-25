@@ -3,7 +3,7 @@ cachetools==4.2.2
 python-telegram-bot==13.9
 Telethon==1.24.0
 pyrate-limiter
-sqlalchemy==1.4.11
+sqlalchemy==2.0.29
 git+https://github.com/trentm/python-markdown2.git
 future
 psycopg2-binary
